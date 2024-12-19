@@ -1,0 +1,108 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<div class="jumbotron container-mini">
+    <h1>Pskovmetall</h1>
+    <p class="lead">
+        Добро пожаловать в фирму «Изделия из металла» – мир металла и мастерства!
+
+        Наша фирма – это место, где каждое изделие создается с любовью к деталям и стремлением к совершенству. Мы специализируемся на производстве печей, заборов, дверей, мангалов, перил, лестниц и других металлоконструкций, а также занимаемся металлопрокатом.
+
+        Каждый наш проект – это не просто металл, а воплощение ваших идей и мечтаний. Наши квалифицированные специалисты и современное оборудование позволяют нам выполнять заказы любой сложности с высоким качеством и в срок. Мы гордимся нашей репутацией надежного партнера и стремимся предоставлять нашим клиентам только лучшие решения.
+
+        В нашей фирме мы создаем не просто изделия, а настоящие произведения искусства, которые будут служить вам долгие годы. Обращайтесь к нам, и мы поможем воплотить ваши идеи в жизнь!
+    </p>
+</div>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+
+    <ol class="carousel-indicators">
+
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <a href="index.html"></a>
+
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+
+        <div class="item active">
+
+            <img src="{% static 'app/content/banner1 (2).jpg'%} " alt="Первый слайд" class="img-responsive" />
+
+            <div class="carousel-caption" role="option">
+
+                
+                <a class="btn btn-default" href="{% url 'contact' %}">
+
+                    Перейти
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="item">
+
+            <img src="{% static 'app/content/banner2__ (1).jpg'%}" alt="Второй слайд" class="img-responsive" />
+
+            <div class="carousel-caption" role="option">
+
+                
+                <a class="btn btn-default" href="{% url 'works' %}">
+
+                    Перейти
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+        <div class="item">
+
+            <img src=" {% static 'app/content/banner3 (2) (1).jpg'%} " alt="Третий слайд" class="img-responsive" />
+
+            <div class="carousel-caption" role="option">
+
+                
+
+                <a class="btn btn-default" href="{% url 'works' %}">
+
+                    Перейти
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+
+        <span class="sr-only">Previous</span>
+
+    </a>
+
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+
+        <span class="sr-only">Next</span>
+
+    </a>
+
+</div>
+
+{% endblock %}

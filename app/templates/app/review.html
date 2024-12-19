@@ -1,0 +1,66 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+{% if form != None %}
+<div class="container mt-5 container-custom">
+    <br>
+    <h2>Оставьте пожалуйста ваш отзыв!</h2>
+    <br>
+    <div>
+        <form method="post">
+            {% csrf_token %}
+            <div>
+                <label for="{{ form.name.id_for_label }}">{{ form.name.label }}:</label>
+                {{ form.name }}
+            </div>
+            <div>
+                <label for="{{ form.city.id_for_label }}">{{ form.city.label }}:</label>
+                {{ form.city }}
+            </div>
+            <div>
+                <label for="{{ form.rating.id_for_label }}">{{ form.rating.label }}:</label>
+                {{ form.rating }}
+            </div>
+            <div>
+                <label for="{{ form.notice.id_for_label }}">{{ form.notice.label }}:</label>
+                {{ form.notice }}
+            </div>
+            <div>
+                <label for="{{ form.email.id_for_label }}">{{ form.email.label }}:</label>
+                {{ form.email }}
+            </div>
+            <div>
+                <label for="{{ form.message.id_for_label }}">{{ form.message.label }}:</label>
+                {{ form.message }}
+            </div>
+            <input type="submit" value="Отправить" id="submit-btn">
+        </form>
+    </div>
+    {% else %}
+    <br>
+    <h2>Благодарим, {{ data.name }}, за ваш отзыв! </h2>
+    {% endif %}
+</div>
+
+<script>
+    const submitBtn = document.getElementById('submit-btn');
+    submitBtn.addEventListener('mouseover', function() {
+        this.style.color = 'green';
+    });
+    submitBtn.addEventListener('mouseout', function() {
+        this.style.color = '';
+    });
+
+    const inputs = document.querySelectorAll('input, textarea');
+    inputs.forEach(input => {
+        input.addEventListener('focus', function() {
+            this.style.backgroundColor = 'lightyellow';
+        });
+        input.addEventListener('blur', function() {
+            this.style.backgroundColor = '';
+        });
+    });
+</script>
+
+{% endblock %}

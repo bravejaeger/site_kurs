@@ -1,0 +1,34 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+<div class="container mt-5 container-custom">
+    <h1>Пример работ</h1>
+    {% if user.is_superuser %}
+
+    {% endif %}
+
+    <div class="food-list">
+        {% for work in works %}
+        <div class="food-card">
+            <div class="food-details">
+                {% if user.is_superuser %}
+
+                {% endif %}
+                <hr><img src="{{ work.image.url }}" alt="Pictures" width="200" height="200" />
+                <h2 class="food-title">{{ work.title }}</h2>
+                <p class="food-description">{{ work.description }}</p>
+                <p class="food-price">{{ work.price }} руб</p>
+                {% if user.is_authenticated %}
+                <button class="btn-primary add-to-cart" data-food-id="{{ work.id }}">В корзину</button>
+                {% else %}
+                <a href="{% url 'registration' %}" class="btn-primary">Для добаления в корзину зарегистрируйтесь</a>
+                {% endif %}
+                {% if user.is_superuser %}
+
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

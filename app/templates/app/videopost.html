@@ -1,0 +1,30 @@
+{% extends "app/layout.html" %}
+
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 container-custom">
+    <div>
+        <b>{{ title }}</b>
+    </div>
+
+    <hr />
+
+    <div class="column">
+        <h2>Мы за спорт:</h2>
+        <VIDEO src="/media/видео1.mp4" controls="controls" width="400" height="300" poster="/media/videopost1.jpg"></VIDEO>
+        <p> <br />Мы за спортивный образ жизни – спортивный тренажёр из наших труб.  <i>Поставляем для спортивных залов. </i></p>
+    </div>
+
+    <hr />
+
+    <div class="column">
+        <h2>Трубы:</h2>
+        <VIDEO src="/media/видео2.mp4" controls="controls" width="400" height="300" poster="/media/videopost2.jpg"></VIDEO>
+        <p>
+            <br />
+            У нас всегда в наличии огромный ассортимент профильных труб различных типоразмеров..<i>Минимальная цена 5т.р..</i>
+        </p>
+    </div>
+</div>
+{% endblock %}

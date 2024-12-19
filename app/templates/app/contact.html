@@ -1,0 +1,31 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+<div class="container mt-5 container-custom">
+    <h2 class="text-center mb-4">{{ title }}.</h2>
+    <h3 class="text-center mb-4">{{ message }}</h3>
+
+    <div class="card">
+        <div class="card-body">
+            <address>
+                <strong>Адрес:</strong> 180000, Россия, Псков, ул. Новаторов, д. 11<br>
+                <a href="https://maps.google.com/?q=180000, Россия, Псков, ул. Новаторов, д. 11" target="_blank">Посмотреть на карте</a><br>
+                <strong>Телефоны:</strong><br>
+                +7 (8112) 53-17-53<br>
+                +7 (8112) 51-00-08<br>
+                +7 (8112) 23-17-53<br>
+                +7 (8112) 23-17-54<br>
+                <strong>Часы работы:</strong><br>
+                Пн - Пт с 9:00 до 18:00<br>
+                Обед с 13:00 до 14:00<br>
+                Суббота с 10:00 до 16:00
+            </address>
+
+            <address class="mt-4">
+                <strong>Техническая поддержка:</strong> <a href="mailto:Support@example.com">egorairman2003@mail.ru</a><br>
+                <strong>Отдел маркетинга:</strong> <a href="mailto:Marketing@example.com">egorairman2003@mail.ru</a>
+            </address>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+{% load static %}
+<div class="container mt-5 container-custom">
+    <h2>Список ресурсов о рекламе:</h2>
+        <main>
+            <ul>
+                <li>
+                    <a href="https://metallproff.ru/" target="_blank">
+                        <img src="{% static 'app/content/links1.jpg' %}" alt="Metallproff" style="width:200px;height:auto;">
+                    </a>
+                </li>
+                <li style="margin-top: 20px">
+                    <a href="https://stroybazapskov.ru/obschestroitelnye-materialy/metalloprokat" target="_blank">
+                        <img src="{% static 'app/content/links2.jpg' %}" alt="Строй база все и сразу" style="width:200px;height:auto;">
+                    </a>
+                </li>
+                <li style="margin-top: 20px">
+                    <a href="https://mega-pskov.ru/" target="_blank">
+                        <img src="{% static 'app/content/links3.jpg' %}" alt="Mega-pskov" style="width:200px;height:auto;">
+                    </a>
+                </li>
+            </ul>
+        </main>
+</div>
+{% endblock %}
